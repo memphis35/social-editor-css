@@ -12,6 +12,29 @@ button {
     outline: none;
 }
 
+/* ------- KEY FRAMES ------- */
+@keyframes fade-in-from-left {
+    0% {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fade-in-from-top {
+    0% {
+        opacity: 0;
+        transform: translateY(-100%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 /* GLOBAL STYLES */
 .app {
     font-family: Lato, sans-serif;
@@ -21,6 +44,12 @@ button {
     width: 100vw;
 }
 
+.app__container {
+    height: calc(100vh - 55px);
+    display: flex;
+}
+
+/* HEADER STYLES */
 .header {
     background-image: linear-gradient(to right, #18A0BE, #622DB9);
     height: 55px;
@@ -39,6 +68,7 @@ button {
     padding: 0 13px;
     transition: color 0.5s, background-color 0.7s;
     cursor: pointer;
+    animation: fade-in-from-top 0.5s;
 }
 
 .dd-toggle:hover, .dd-toggle:focus {
@@ -63,4 +93,82 @@ button {
     object-fit: cover;
     border-radius: 50%;
     margin-right: 8px;
+}
+
+/* ----------------- SIDEBAR ----------------- */
+.sidebar {
+    background-color: #10171A;
+    width: 75px;
+    display: flex;
+    flex-direction: column;
+}
+
+.menu {
+
+}
+
+.menu__button {
+    padding: 19px 0;
+    color: rgba(255, 255, 255, 0.4);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 4px;
+    transition: background-color 0.4s, color 0.4s;
+    animation: fade-in-from-left 0.5s;
+}
+
+.menu__button--active {
+    background-color: #2b363b;
+    color: #fff;
+    position: relative;
+}
+
+.menu__button--active::before {
+    content: '';
+    width: 3px;
+    height: 100%;
+    background-color: #375bb6;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.menu__button:hover, .menu__button:focus {
+    background-color: #2b363b;
+    color: #fff;
+    cursor: pointer;
+}
+
+.menu__icon {
+    font-size: 18px;
+}
+
+.menu__text {
+    font-weight: 12;
+    font-size: 12px;
+}
+
+.footer {
+    margin-top: auto;
+    margin-bottom: 60px;
+    transform: rotate(-90deg);
+}
+
+.copyright {
+    color: rgba(255, 255, 255, 0.2);
+    white-space: nowrap;
+}
+
+/* ----------------- PANEL ----------------- */
+.panel {
+    background-color: #2b363C;
+    width: 350px;
+}
+
+/* ----------------- MAIN ----------------- */
+.main {
+    background-color: #EDF1F3;
+    flex: 12;
 }
