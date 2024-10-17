@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge"> <!-- -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- -->
 
-    <link rel="icon" href="favicon-16x16.png" type="image/x-icon">
+    <link rel="icon" href="img/favicon-16x16.png" type="image/x-icon">
     <!-- displays an icon provided locally or remotely (via http-link) on the tab -->
     <link rel="stylesheet"
           href="https://cdnjs.cloudflare.com/ajax/libs/lato-font/3.0.0/css/lato-font.min.css"
@@ -22,7 +22,7 @@
 </head>
 <body class="app">
 <header class="header">
-    <img src="logo.svg" alt="logo" class="logo">
+    <img src="img/logo.svg" alt="logo" class="logo">
     <button class="dd-toggle">File</button>
     <button class="dd-toggle">View</button>
     <button class="dd-toggle">New</button>
@@ -33,7 +33,7 @@
         <i class="fas fa-bell dd-toggle__icon"></i>
     </button>
     <button class="dd-toggle">
-        <img src="john_doe.png" alt="user photo" class="dd-toggle__img">
+        <img src="img/john_doe.png" alt="user photo" class="dd-toggle__img">
         <span class="dd-toggle__text">John Doe</span>
     </button>
 </header>
@@ -63,7 +63,22 @@
             </small>
         </footer>
     </div>
-    <section class="panel"></section>
+    <section class="panel">
+        <div class="panel__top">
+            <h1 class="first-heading">Images</h1>
+            <i class="fas fa-angle-double-left panel__collapse-icon"></i>
+        </div>
+        <div class="panel__images">
+            <img src="img/image_1.jpg" alt="image" class="panel__img">
+            <img src="img/image_2.jpg" alt="image" class="panel__img">
+            <img src="img/image_3.jpg" alt="image" class="panel__img">
+            <img src="img/image_4.jpg" alt="image" class="panel__img">
+            <img src="img/image_5.jpg" alt="image" class="panel__img">
+            <button class="panel__btn">
+                <i class="fa fa-plus panel__upload-icon"></i>
+            </button>
+        </div>
+    </section>
     <main class="main"></main>
 </div>
 
